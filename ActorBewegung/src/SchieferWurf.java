@@ -42,7 +42,9 @@ public class SchieferWurf extends GameGrid {
 		p.circle(250,250,15,true);
     }
 
-	
+	/**
+	 *  Hauptactor in der Zelle
+	 */
 	public void act(){
 
 	    //vy = vy + 9.81 * speedFactor;
