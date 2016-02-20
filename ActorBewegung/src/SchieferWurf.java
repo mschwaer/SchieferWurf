@@ -18,7 +18,10 @@ public class SchieferWurf extends GameGrid {
 	private double b = 45;
 	private double vx, vy, x, y;
 	private final double speedFactor = 0.1;
-	  
+	/***
+	 * 
+	 * Konstruktor Schiefer Wurf 
+	 */
 	SchieferWurf () {
 		super(500, 500);
 		this.show();
