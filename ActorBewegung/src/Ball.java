@@ -10,4 +10,8 @@ public class Ball extends Actor{
 	public Ball () {
 	    super(false, "sprites/ball.gif", 2);
 	}
+	
+	public void klo(){
+		
+	}
 }
