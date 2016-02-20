@@ -66,7 +66,10 @@ public class SchieferWurf extends GameGrid {
 	}
 	
 	   
-	  
+	/***
+	 * Und noch eine kleine Bla Bal Main
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{
 	  new SchieferWurf();
