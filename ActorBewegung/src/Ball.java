@@ -16,7 +16,4 @@ public class Ball extends Actor{
 	    super(false, "sprites/ball.gif", 2);
 	}
 	
-	public void klo(){
-		System.out.println("jjj");
-	}
 }
