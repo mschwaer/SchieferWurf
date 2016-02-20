@@ -15,7 +15,7 @@ import ch.aplu.util.LoResTimer;
  * 
  *
  */
-public class Ball2 extends Actor{
+public class Ball extends Actor{
 
 	private IMove myMove;
 	private GGPanel p;
@@ -24,7 +24,7 @@ public class Ball2 extends Actor{
 	/***
 	 *  Ball Constructor
 	 */
-	Ball2(IMove tMove, GGPanel pin) {
+	Ball(IMove tMove, GGPanel pin) {
 	    super(false, "sprites/ball.gif", 2);
 	    myMove = tMove;
 	    //myMove.setAngle(45);

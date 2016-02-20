@@ -16,8 +16,8 @@ import ch.aplu.util.Monitor;
  */
 public class Main extends GameGrid {
 	private GGPanel p;
-	private Ball2 myball;
-	private Ball2 myball2;
+	private Ball myball;
+	private Ball myball2;
 
 	/***
 	 * 
@@ -29,11 +29,10 @@ public class Main extends GameGrid {
 	    p = getPanel();
 	    //p.setRefreshEnabled(true);
 	    p.window(0,500,0,500);
-	    myball = new Ball2(new SchieferWurfMove(new Location(0,0),0.0,80,70),p);
+	    myball = new Ball(new SchieferWurfMove(new Location(0,0),0.0,80,70),p);
 	    this.addActor(myball, new Location(0,0));
-	    myball2 = new Ball2(new SchieferWurfMove(new Location(0,0),0.0,60,50),p);
+	    myball2 = new Ball(new SchieferWurfMove(new Location(0,0),0.0,60,50),p);
 	    this.addActor(myball2, new Location(0,0));
-
 	    this.setSimulationPeriod(30);
 	    doRun();
   
