@@ -3,6 +3,8 @@ import ch.aplu.jgamegrid.Actor;
 /**
  *  Einfacher Ball von JGameGrid
  * @author mschwaer
+ * 
+ * 
  *
  */
 public class Ball extends Actor{
@@ -15,6 +17,6 @@ public class Ball extends Actor{
 	}
 	
 	public void klo(){
-		
+		System.out.println("jjj");
 	}
 }
