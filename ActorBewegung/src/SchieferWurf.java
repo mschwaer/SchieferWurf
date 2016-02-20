@@ -10,7 +10,7 @@ import ch.aplu.util.Monitor;
 
 public class SchieferWurf extends GameGrid {
 	private GGPanel p;
-	private Ball1 myball = new Ball1();
+	private Ball myball = new Ball();
 	private int counter= 0;
 	private double t = 0;
 	private double g = 9.98;
