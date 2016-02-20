@@ -7,7 +7,11 @@ import ch.aplu.jgamegrid.Location;
 import ch.aplu.util.Complex;
 import ch.aplu.util.Monitor;
 
-
+/***
+ *  Juhe
+ * @author mschwaer
+ *
+ */
 public class SchieferWurf extends GameGrid {
 	private GGPanel p;
 	private Ball myball = new Ball();
