@@ -27,8 +27,6 @@ public class Ball extends Actor{
 	Ball(IMove tMove, GGPanel pin) {
 	    super(false, "sprites/ball.gif", 2);
 	    myMove = tMove;
-	    //myMove.setAngle(45);
-	    //myMove.setSpeed(60);
 	    p = pin;
 	    lrt = new LoResTimer();
 	    lrt.start();
@@ -36,7 +34,7 @@ public class Ball extends Actor{
 	
 	public void act() {
 	   t = lrt.getTime()/100000.0;
-	   System.out.println(t); 
+	   //System.out.println(t); 
 	   myMove.setTime(t);	
 	   p.color(Color.white);
 	   //p.point((int)x,(int)y);

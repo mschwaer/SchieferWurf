@@ -21,27 +21,9 @@ public class SchieferWurfMove implements IMove {
 	}
 	
 	@Override
-	public void setStartLocation(Location l) {
-		// TODO Auto-generated method stub
-		mLoc =l;
-	}
-
-	@Override
 	public void setTime(double t) {
 		// TODO Auto-generated method stub
 		mTime =t;
-	}
-
-	@Override
-	public void setSpeed(int s) {
-		// TODO Auto-generated method stub
-		mSpeed = s;
-	}
-
-	@Override
-	public void setAngle(int a) {
-		// TODO Auto-generated method stub
-		mAngle = a;
 	}
 
 	@Override
