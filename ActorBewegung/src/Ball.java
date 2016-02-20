@@ -7,6 +7,9 @@ import ch.aplu.jgamegrid.Actor;
  */
 public class Ball extends Actor{
 
+	/***
+	 *  Ball Constructor
+	 */
 	public Ball () {
 	    super(false, "sprites/ball.gif", 2);
 	}
