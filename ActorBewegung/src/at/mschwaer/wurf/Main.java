@@ -18,6 +18,7 @@ public class Main extends GameGrid {
 	private GGPanel p;
 	private Ball myball;
 	private Ball myball2;
+	private Ball myball3;
 	private static int xSize = 500;
 	private static int ySize = 500;
 
@@ -35,6 +36,8 @@ public class Main extends GameGrid {
 	    this.addActor(myball, new Location(0,0));
 	    myball2 = new Ball(new SchieferWurfMove(new Location(0,0),0.0,60,50),p,ySize,xSize);
 	    this.addActor(myball2, new Location(0,0));
+	    myball3 = new Ball(new ZickZackMove(new Location(0,100),0.0,50),p,ySize,xSize);
+	    this.addActor(myball3, new Location(0,0));
 	    this.setSimulationPeriod(30);
 	    doRun();
   
