@@ -43,7 +43,7 @@ public class Ball extends Actor{
 	    x = vx* t;
 	    y = vy* t - (t*t*0.5*g);
 	    
-	   System.out.println(counter + " " + t+ " " + x + " " +y);
+	   //System.out.println(counter + " " + t+ " " + x + " " +y);
 	   p.color(Color.white);
 	   //p.point((int)x,(int)y);
 	   p.circle(x,100+y,5,false);
