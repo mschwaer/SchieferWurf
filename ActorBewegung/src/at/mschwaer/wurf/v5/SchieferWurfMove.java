@@ -1,23 +1,24 @@
+package at.mschwaer.wurf.v5;
 
 
 import ch.aplu.jgamegrid.Location;
 
 
-public class ZickZackMove implements IMove {
+public class SchieferWurfMove implements IMove {
 
 	private Location mLoc;
 	private double mTime=0;
 	private int mSpeed=0;
 	private int mAngle=0;
 	private double vx,vy;
-	private double speedFactor = 0.25;
-	private int startY = 1;
+	private double speedFactor = 0.5;
+	private double g = 9.98;
 	
-	ZickZackMove(Location l, double t, int s,boolean upSize){
+	SchieferWurfMove(Location l, double t, int s, int a){
 		mLoc =l;
 		mTime =t;
 		mSpeed =s;
-        if (upSize) startY = -1;
+		mAngle = a;
 	}
 	
 	@Override
@@ -31,11 +32,11 @@ public class ZickZackMove implements IMove {
 		// TODO Auto-generated method stub
 		int x;
 		int y;
-		double t = speedFactor * mTime;	 
-		vx = 0.5 * mSpeed;
-	    vy = Math.asin(Math.cos(t))*2/Math.PI * mSpeed * startY;
-   	    x = mLoc.getX()+ (int)(vx* t);
-	    y = mLoc.getY()+(int)(vy);
+	    vx = Math.cos(mAngle*Math.PI/180) * mSpeed;
+	    vy = Math.sin(mAngle*Math.PI/180) * mSpeed;
+		double t = speedFactor * mTime;	    
+	    x = mLoc.getX()+ (int)(vx* t);
+	    y = mLoc.getY()+(int)(vy* t - (t*t*0.5*g));
 		return new Location(x,y);
 	}
 
