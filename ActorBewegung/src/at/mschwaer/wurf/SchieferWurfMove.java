@@ -10,7 +10,7 @@ public class SchieferWurfMove implements IMove {
 	private int mSpeed=0;
 	private int mAngle=0;
 	private double vx,vy;
-	private double speedFactor = 1;
+	private double speedFactor = 0.5;
 	private double g = 9.98;
 	
 	SchieferWurfMove(Location l, double t, int s, int a){
@@ -29,15 +29,14 @@ public class SchieferWurfMove implements IMove {
 	@Override
 	public Location getLocation() {
 		// TODO Auto-generated method stub
-		calculateLocation();
-		return mLoc;
-	}
-
-	private void calculateLocation() {
+		int x;
+		int y;
 	    vx = Math.cos(mAngle*Math.PI/180) * mSpeed;
 	    vy = Math.sin(mAngle*Math.PI/180) * mSpeed;
-	    
-		double t = speedFactor * mTime;
-		mLoc = new Location((int)(vx* t),(int)(vy* t - (t*t*0.5*g)));
+		double t = speedFactor * mTime;	    
+	    x = mLoc.getX()+ (int)(vx* t);
+	    y = mLoc.getY()+(int)(vy* t - (t*t*0.5*g));
+		return new Location(x,y);
 	}
+
 }
