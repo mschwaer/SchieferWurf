@@ -1,3 +1,5 @@
+package at.mschwaer.wurf.v1;
+
 import ch.aplu.jgamegrid.Actor;
 
 /**

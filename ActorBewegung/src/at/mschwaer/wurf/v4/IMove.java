@@ -1,4 +1,4 @@
-package at.mschwaer.wurf;
+package at.mschwaer.wurf.v4;
 
 import ch.aplu.jgamegrid.Location;
 

@@ -1,4 +1,4 @@
-package at.mschwaer.wurf;
+package at.mschwaer.wurf.v4;
 
 import java.awt.Color;
 import java.awt.Point;
@@ -37,8 +37,8 @@ public class Main extends GameGrid {
 	    this.addActor(myball, new Location(0,0));
 	    myball2 = new Ball(new SchieferWurfMove(new Location(0,0),0.0,60,50),p,ySize,xSize);
 	    this.addActor(myball2, new Location(0,0));
-	    myball3 = new Ball(new ZickZackMove(new Location(0,100),0.0,50,false),p,ySize,xSize);
-	    myball4 = new Ball(new ZickZackMove(new Location(0,100),0.0,50,true),p,ySize,xSize);
+	    myball3 = new Ball(new ZickZackMove(new Location(0,100),0.0,50),p,ySize,xSize);
+	    myball4 = new Ball(new ZickZackMove(new Location(50,100),0.0,50),p,ySize,xSize);
 	    this.addActor(myball3, new Location(0,0));
 	    this.addActor(myball4, new Location(0,0));
 	    this.setSimulationPeriod(30);

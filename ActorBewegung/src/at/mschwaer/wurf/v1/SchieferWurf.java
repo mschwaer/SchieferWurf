@@ -1,3 +1,4 @@
+package at.mschwaer.wurf.v1;
 import java.awt.Color;
 import java.awt.Point;
 
