@@ -11,12 +11,13 @@ public class ZickZackMove implements IMove {
 	private int mAngle=0;
 	private double vx,vy;
 	private double speedFactor = 0.25;
+	private int startY = 1;
 	
-	ZickZackMove(Location l, double t, int s){
+	ZickZackMove(Location l, double t, int s,boolean upSize){
 		mLoc =l;
 		mTime =t;
 		mSpeed =s;
-
+        if (upSize) startY = -1;
 	}
 	
 	@Override
@@ -32,7 +33,7 @@ public class ZickZackMove implements IMove {
 		int y;
 		double t = speedFactor * mTime;	 
 		vx = 0.5 * mSpeed;
-	    vy = Math.asin(Math.cos(t))*2/Math.PI * mSpeed;
+	    vy = Math.asin(Math.cos(t))*2/Math.PI * mSpeed * startY;
    	    x = mLoc.getX()+ (int)(vx* t);
 	    y = mLoc.getY()+(int)(vy);
 		return new Location(x,y);
